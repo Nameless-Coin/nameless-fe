@@ -9,29 +9,56 @@ importers:
   .:
     dependencies:
       '@mysten/sui.js':
-        specifier: ^0.54.1
-        version: 0.54.1(svelte@4.2.17)(typescript@5.4.5)
+        specifier: ^0.51.2
+        version: 0.51.2(svelte@4.2.17)(typescript@5.4.5)
       '@phosphor-icons/react':
         specifier: ^2.1.5
         version: 2.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-dialog':
+        specifier: ^1.0.5
+        version: 1.0.5(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-icons':
         specifier: ^1.3.0
         version: 1.3.0(react@18.3.1)
       '@suiet/wallet-kit':
         specifier: ^0.2.24
-        version: 0.2.24(@mysten/sui.js@0.54.1(svelte@4.2.17)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(svelte@4.2.17)(typescript@5.4.5)
+        version: 0.2.24(@mysten/sui.js@0.51.2(svelte@4.2.17)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(svelte@4.2.17)(typescript@5.4.5)
       '@suiet/wallet-sdk':
         specifier: ^0.2.21
-        version: 0.2.21(@mysten/sui.js@0.54.1(svelte@4.2.17)(typescript@5.4.5))(svelte@4.2.17)(typescript@5.4.5)
+        version: 0.2.21(@mysten/sui.js@0.51.2(svelte@4.2.17)(typescript@5.4.5))(svelte@4.2.17)(typescript@5.4.5)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
+      lucide-react:
+        specifier: ^0.379.0
+        version: 0.379.0(react@18.3.1)
       next:
         specifier: 14.2.3
-        version: 14.2.3(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 14.2.3(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.2)
       react:
         specifier: ^18
         version: 18.3.1
       react-dom:
         specifier: ^18
         version: 18.3.1(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.51.5
+        version: 7.51.5(react@18.3.1)
+      react-image-file-resizer:
+        specifier: ^0.4.8
+        version: 0.4.8
+      saas:
+        specifier: ^1.0.0
+        version: 1.0.0
+      sass:
+        specifier: ^1.77.2
+        version: 1.77.2
+      sonner:
+        specifier: ^1.4.41
+        version: 1.4.41(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      tailwind-merge:
+        specifier: ^2.3.0
+        version: 2.3.0
       usehooks-ts:
         specifier: ^3.1.0
         version: 3.1.0(react@18.3.1)
@@ -45,6 +72,9 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.3.0
+      autoprefixer:
+        specifier: ^10.4.19
+        version: 10.4.19(postcss@8.4.38)
       eslint:
         specifier: ^8
         version: 8.57.0
@@ -796,10 +826,6 @@ packages:
     resolution: {integrity: sha512-RRG/VHhVvkQlWqodFZagRxVDo3SbXh4e3xTBplhPNNyybugbWj/V+wGrNv5/KtxfVxHBw6jTCoB798ijqPBq7g==}
     engines: {node: '>=16'}
 
-  '@mysten/sui.js@0.54.1':
-    resolution: {integrity: sha512-TSmGIX7U9O/uS9EKIQdv7/S69KTbBhMJVelXCafJE6IJw8iB9cN9uLu0+uklkBSDrbRmLSEY70jMr3uRFjReIg==}
-    engines: {node: '>=16'}
-
   '@mysten/wallet-standard@0.11.2':
     resolution: {integrity: sha512-wDuXHwmdYS+9ewH6w4Fg67QwDpYN6JTKPWC/fuEWRuHy4uS77DfrIG6KHtU0tReMGapevXovKpw6WoSHJHDDHg==}
 
@@ -1371,6 +1397,13 @@ packages:
   ast-types-flow@0.0.8:
     resolution: {integrity: sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ==}
 
+  autoprefixer@10.4.19:
+    resolution: {integrity: sha512-BaENR2+zBZ8xXhM4pUaKUxlVdxZ0EZhjvbopwnXmxRUfqDmwSpC2lAi/QXvx7NRdPCo1WKEcEF6mV64si1z4Ew==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
@@ -1487,6 +1520,10 @@ packages:
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
 
   code-red@1.0.4:
     resolution: {integrity: sha512-7qJWqItLA8/VPVlKJlFXU+NBlo/qyfs39aJcuMT/2ere32ZqvF5OSxgdM5xOfJJ7O429gg2HM47y8v9P+9wrNw==}
@@ -1871,6 +1908,9 @@ packages:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
     engines: {node: '>=14'}
 
+  fraction.js@4.3.7:
+    resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
+
   fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
 
@@ -2004,6 +2044,9 @@ packages:
   ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
+
+  immutable@4.3.6:
+    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
 
   import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
@@ -2261,6 +2304,11 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lucide-react@0.379.0:
+    resolution: {integrity: sha512-KcdeVPqmhRldldAAgptb8FjIunM2x2Zy26ZBh1RsEUcdLIvsEmbcw7KpzFYUy5BbpGeWhPu9Z9J5YXfStiXwhg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+
   magic-string@0.30.10:
     resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
 
@@ -2354,6 +2402,10 @@ packages:
 
   normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
+    engines: {node: '>=0.10.0'}
+
+  normalize-range@0.1.2:
+    resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
 
   nth-check@2.1.1:
@@ -2539,6 +2591,15 @@ packages:
     peerDependencies:
       react: ^18.3.1
 
+  react-hook-form@7.51.5:
+    resolution: {integrity: sha512-J2ILT5gWx1XUIJRETiA7M19iXHlG74+6O3KApzvqB/w8S5NQR7AbU8HVZrMALdmDgWpRPYiZJl0zx8Z4L2mP6Q==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+
+  react-image-file-resizer@0.4.8:
+    resolution: {integrity: sha512-Ue7CfKnSlsfJ//SKzxNMz8avDgDSpWQDOnTKOp/GNRFJv4dO9L5YGHNEnj40peWkXXAK2OK0eRIoXhOYpUzUTQ==}
+
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -2653,6 +2714,9 @@ packages:
   run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
 
+  saas@1.0.0:
+    resolution: {integrity: sha512-FgayhFS18BlPfcyMcOqxD7PIyNyUjqyv8R+rsr3X2KRK2icEUL4uvWBF+lZ0IPqJIO2kUO0d20OXY+R+pdriqg==}
+
   safe-array-concat@1.1.2:
     resolution: {integrity: sha512-vj6RsCsWBCf19jIeHEfkRMw8DPiBb+DMXklQ/1SGDHOMlHdPUkZXFQ2YdplS23zESTijAcurb1aSgJA3AgMu1Q==}
     engines: {node: '>=0.4'}
@@ -2660,6 +2724,11 @@ packages:
   safe-regex-test@1.0.3:
     resolution: {integrity: sha512-CdASjNJPvRa7roO6Ra/gLYBTzYzzPyyBXxIMdGW3USQLyjWEls2RgW5UBTXaQVp+OrpeCK3bLem8smtmheoRuw==}
     engines: {node: '>= 0.4'}
+
+  sass@1.77.2:
+    resolution: {integrity: sha512-eb4GZt1C3avsX3heBNlrc7I09nyT00IUuo4eFhAbeXWU2fvA7oXI53SxODVAA+zgZCk9aunAZgO+losjR3fAwA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
 
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
@@ -2700,6 +2769,12 @@ packages:
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
+
+  sonner@1.4.41:
+    resolution: {integrity: sha512-uG511ggnnsw6gcn/X+YKkWPo5ep9il9wYi3QJxHsYe7yTZ4+cOd1wuodOUmOpFuXL+/RE3R04LczdNCDygTDgQ==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
 
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
@@ -2807,6 +2882,9 @@ packages:
     resolution: {integrity: sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+
+  tailwind-merge@2.3.0:
+    resolution: {integrity: sha512-vkYrLpIP+lgR0tQCG6AP7zZXCTLc1Lnv/CCRT3BqJ9CZ3ui2++GPaGb1x/ILsINIMSYqqvrpqjUFsMNLlW99EA==}
 
   tailwindcss@3.4.3:
     resolution: {integrity: sha512-U7sxQk/n397Bmx4JHbJx/iSOOv5G+II3f1kpLpY2QeUv5DcPdcTsYLlusZfq1NthHS1c1cZoyFmmkex1rzke0A==}
@@ -3896,24 +3974,6 @@ snapshots:
       - svelte
       - typescript
 
-  '@mysten/sui.js@0.54.1(svelte@4.2.17)(typescript@5.4.5)':
-    dependencies:
-      '@graphql-typed-document-node/core': 3.2.0(graphql@16.8.1)
-      '@mysten/bcs': 0.11.1
-      '@noble/curves': 1.4.0
-      '@noble/hashes': 1.4.0
-      '@scure/bip32': 1.4.0
-      '@scure/bip39': 1.3.0
-      '@suchipi/femver': 1.0.0
-      bech32: 2.0.0
-      gql.tada: 1.7.5(graphql@16.8.1)(svelte@4.2.17)(typescript@5.4.5)
-      graphql: 16.8.1
-      superstruct: 1.0.4
-      tweetnacl: 1.0.3
-    transitivePeerDependencies:
-      - svelte
-      - typescript
-
   '@mysten/wallet-standard@0.11.2(svelte@4.2.17)(typescript@5.4.5)':
     dependencies:
       '@mysten/sui.js': 0.51.2(svelte@4.2.17)(typescript@5.4.5)
@@ -4158,12 +4218,12 @@ snapshots:
 
   '@suchipi/femver@1.0.0': {}
 
-  '@suiet/wallet-kit@0.2.24(@mysten/sui.js@0.54.1(svelte@4.2.17)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(svelte@4.2.17)(typescript@5.4.5)':
+  '@suiet/wallet-kit@0.2.24(@mysten/sui.js@0.51.2(svelte@4.2.17)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(svelte@4.2.17)(typescript@5.4.5)':
     dependencies:
-      '@mysten/sui.js': 0.54.1(svelte@4.2.17)(typescript@5.4.5)
+      '@mysten/sui.js': 0.51.2(svelte@4.2.17)(typescript@5.4.5)
       '@mysten/wallet-standard': 0.11.2(svelte@4.2.17)(typescript@5.4.5)
       '@radix-ui/react-dialog': 1.0.5(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@suiet/wallet-sdk': 0.2.21(@mysten/sui.js@0.54.1(svelte@4.2.17)(typescript@5.4.5))(svelte@4.2.17)(typescript@5.4.5)
+      '@suiet/wallet-sdk': 0.2.21(@mysten/sui.js@0.51.2(svelte@4.2.17)(typescript@5.4.5))(svelte@4.2.17)(typescript@5.4.5)
       '@svgr/rollup': 6.5.1
       '@wallet-standard/core': 1.0.3
       buffer: 6.0.3
@@ -4181,9 +4241,9 @@ snapshots:
       - svelte
       - typescript
 
-  '@suiet/wallet-sdk@0.2.21(@mysten/sui.js@0.54.1(svelte@4.2.17)(typescript@5.4.5))(svelte@4.2.17)(typescript@5.4.5)':
+  '@suiet/wallet-sdk@0.2.21(@mysten/sui.js@0.51.2(svelte@4.2.17)(typescript@5.4.5))(svelte@4.2.17)(typescript@5.4.5)':
     dependencies:
-      '@mysten/sui.js': 0.54.1(svelte@4.2.17)(typescript@5.4.5)
+      '@mysten/sui.js': 0.51.2(svelte@4.2.17)(typescript@5.4.5)
       '@mysten/wallet-standard': 0.11.2(svelte@4.2.17)(typescript@5.4.5)
       '@noble/hashes': 1.4.0
       buffer: 6.0.3
@@ -4533,6 +4593,16 @@ snapshots:
 
   ast-types-flow@0.0.8: {}
 
+  autoprefixer@10.4.19(postcss@8.4.38):
+    dependencies:
+      browserslist: 4.23.0
+      caniuse-lite: 1.0.30001621
+      fraction.js: 4.3.7
+      normalize-range: 0.1.2
+      picocolors: 1.0.1
+      postcss: 8.4.38
+      postcss-value-parser: 4.2.0
+
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.0.0
@@ -4671,6 +4741,8 @@ snapshots:
   classnames@2.5.1: {}
 
   client-only@0.0.1: {}
+
+  clsx@2.1.1: {}
 
   code-red@1.0.4:
     dependencies:
@@ -5204,6 +5276,8 @@ snapshots:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
+  fraction.js@4.3.7: {}
+
   fs.realpath@1.0.0: {}
 
   fsevents@2.3.3:
@@ -5342,6 +5416,8 @@ snapshots:
   ieee754@1.2.1: {}
 
   ignore@5.3.1: {}
+
+  immutable@4.3.6: {}
 
   import-fresh@3.3.0:
     dependencies:
@@ -5577,6 +5653,10 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  lucide-react@0.379.0(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   magic-string@0.30.10:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -5637,7 +5717,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  next@14.2.3(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  next@14.2.3(@babel/core@7.24.6)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.2):
     dependencies:
       '@next/env': 14.2.3
       '@swc/helpers': 0.5.5
@@ -5658,6 +5738,7 @@ snapshots:
       '@next/swc-win32-arm64-msvc': 14.2.3
       '@next/swc-win32-ia32-msvc': 14.2.3
       '@next/swc-win32-x64-msvc': 14.2.3
+      sass: 1.77.2
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -5670,6 +5751,8 @@ snapshots:
   node-releases@2.0.14: {}
 
   normalize-path@3.0.0: {}
+
+  normalize-range@0.1.2: {}
 
   nth-check@2.1.1:
     dependencies:
@@ -5854,6 +5937,12 @@ snapshots:
       react: 18.3.1
       scheduler: 0.23.2
 
+  react-hook-form@7.51.5(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
+  react-image-file-resizer@0.4.8: {}
+
   react-is@16.13.1: {}
 
   react-query@3.39.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
@@ -5975,6 +6064,8 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
+  saas@1.0.0: {}
+
   safe-array-concat@1.1.2:
     dependencies:
       call-bind: 1.0.7
@@ -5987,6 +6078,12 @@ snapshots:
       call-bind: 1.0.7
       es-errors: 1.3.0
       is-regex: 1.1.4
+
+  sass@1.77.2:
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
 
   scheduler@0.23.2:
     dependencies:
@@ -6028,6 +6125,11 @@ snapshots:
   signal-exit@4.1.0: {}
 
   slash@3.0.0: {}
+
+  sonner@1.4.41(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   source-map-js@1.2.0: {}
 
@@ -6159,6 +6261,10 @@ snapshots:
       csso: 4.2.0
       picocolors: 1.0.1
       stable: 0.1.8
+
+  tailwind-merge@2.3.0:
+    dependencies:
+      '@babel/runtime': 7.24.6
 
   tailwindcss@3.4.3:
     dependencies:
