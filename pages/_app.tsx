@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@suiet/wallet-kit/style.css";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
 import { WalletProvider } from "@suiet/wallet-kit";
