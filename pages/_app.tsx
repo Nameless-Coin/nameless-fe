@@ -1,13 +1,29 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
+import { WalletProvider } from "@suiet/wallet-kit";
+import { cn } from "@/lib/utils";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={inter.className}>
-      <Component {...pageProps} />
-    </div>
+    <>
+      <Head>
+        <title>Nameless Coin - First Dynamic Coin on Sui</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
+        />
+      </Head>
+      <main className={cn(inter.className)}>
+        <WalletProvider>
+          <div className="relative flex min-h-screen w-full flex-row gap-2 container py-12">
+            <Component {...pageProps} />
+          </div>
+        </WalletProvider>
+      </main>
+    </>
   );
 }
