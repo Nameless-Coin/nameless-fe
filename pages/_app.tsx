@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import { WalletProvider } from "@suiet/wallet-kit";
 import { cn } from "@/lib/utils";
 import Head from "next/head";
+import { AppProvider } from "@/context/AppContext";
+import Toaster from "@/components/shared/Toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +21,13 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <main className={cn(inter.className)}>
         <WalletProvider>
-          <div className="relative flex min-h-screen w-full flex-row gap-2 container py-12">
-            <Component {...pageProps} />
-          </div>
+          <AppProvider>
+            <div className="relative flex min-h-screen w-full flex-row gap-2 container py-12">
+              <Component {...pageProps} />
+            </div>
+          </AppProvider>
         </WalletProvider>
+        <Toaster />
       </main>
     </>
   );
