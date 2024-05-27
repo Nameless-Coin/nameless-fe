@@ -27,7 +27,14 @@ export const ChangeTickerDialog = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Dialog open={open}>
+    <Dialog
+      open={open}
+      onOpenChange={(isOpen) => {
+        if (!isOpen) {
+          setOpen(isOpen);
+        }
+      }}
+    >
       <DialogTrigger>
         <div
           onClick={() => setOpen(true)}
