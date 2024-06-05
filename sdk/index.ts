@@ -28,8 +28,6 @@ export async function getMetadata(client: SuiClient) {
   // @ts-ignore
   metadata = metadata.data.content.fields;
 
-  console.log(metadata);
-
   // @ts-ignore
   const symbol = metadata?.symbol;
   // @ts-ignore
