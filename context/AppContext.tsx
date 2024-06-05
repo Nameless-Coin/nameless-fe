@@ -4,7 +4,7 @@ import {
   updateCoin as updateCoinImp,
   getCurrentPrice,
 } from "@/sdk";
-import { SuiClient } from "@mysten/sui.js/client";
+import { SuiClient, getFullnodeUrl } from "@mysten/sui.js/client";
 import { TransactionBlock } from "@mysten/sui.js/transactions";
 import { MIST_PER_SUI } from "@mysten/sui.js/utils";
 import { useSuiProvider, useWallet } from "@suiet/wallet-kit";
@@ -41,7 +41,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider = ({ children }: PropsWithChildren<{}>) => {
   const wallet = useWallet();
-  const client = useSuiProvider("https://fullnode.testnet.sui.io:443");
+  const client = useSuiProvider(getFullnodeUrl("testnet"));
   const [coin, setCoin] = useState({
     name: "Nameless Coin",
     symbol: "NLC",

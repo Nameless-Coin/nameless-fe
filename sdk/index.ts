@@ -16,15 +16,30 @@ const DEV_OBJECT_ID =
   "0xfd89f91280ebd07dc83444ee71c6e56f494beb2663f7e7d5d3f9cdabfb7a2c0d";
 
 export async function getMetadata(client: SuiClient) {
-  let metadata = await client.getCoinMetadata({
-    coinType: `${PACKAGE_ADDRESS}::${PACKAGE_NAME}::NAMELESS`,
+  let metadata = await client.getObject({
+    id: "0x5e6eb9aaa4b3853f39959a1bef27fff42bebfc0983d0b641d581ae6e2a1214b8",
+    options: {
+      showContent: true,
+    },
   });
+
   if (!metadata) throw new Error("Coin metadata not found");
 
+  // @ts-ignore
+  metadata = metadata.data.content.fields;
+
+  console.log(metadata);
+
+  // @ts-ignore
   const symbol = metadata?.symbol;
+  // @ts-ignore
   const name = metadata?.name ?? symbol;
-  const iconUrl = metadata?.iconUrl;
+  // @ts-ignore
+  const iconUrl = metadata?.icon_url;
+  // @ts-ignore
   const description = metadata?.description;
+
+  console.log({ symbol, name, iconUrl, description });
 
   return { symbol, name, iconUrl, description } as {
     symbol: string;
